@@ -4,8 +4,8 @@
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
   android:orientation="vertical">
-<TextView android:id="@+id/textWord" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize ="50px"></TextView>
-<TextView android:id="@+id/textState" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize ="50px"></TextView>
-<TextView android:id="@+id/textDef" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize ="50px"></TextView>
+<TextView android:id="@+id/textWord" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize ="40px"></TextView>
+<TextView android:id="@+id/textState" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize ="40px"></TextView>
+<TextView android:id="@+id/textDef" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize ="40px"></TextView>
 
 </LinearLayout>

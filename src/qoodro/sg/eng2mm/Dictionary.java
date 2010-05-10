@@ -51,32 +51,30 @@ public class Dictionary extends Activity {
 	ArrayList<String> states = new ArrayList<String>();
 	ArrayList<String> meanings = new ArrayList<String>();
 	ArrayAdapter<String> myAdapter;
+	ProgressDialog dialog;
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-
+		
 		textCaption = (TextView)findViewById(R.id.textCaption);
 		editQuery = (EditText)findViewById(R.id.editQuery);
 		btnSearch = (Button)findViewById(R.id.btnSearch);
 		listResults = (ListView)findViewById(R.id.listResults);
-
+		
 		myAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,words);
 		listResults.setAdapter(myAdapter);
 
 		btnSearch.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if(editQuery.getText().length()>0){
-					ProgressDialog dialog = ProgressDialog.show(Dictionary.this, "", 
-							"Loading. Please wait...", true);
-					
+				if(editQuery.getText().length()>0){				
 					words.clear();
 					states.clear();
 					meanings.clear();
 					getRelatedWords(editQuery.getText().toString());
-					dialog.dismiss();
+					
 				}else{
 					Toast.makeText(getBaseContext(), "Invalid input",Toast.LENGTH_SHORT).show();
 				}
