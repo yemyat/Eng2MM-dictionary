@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:id="@+id/linear"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:paddingTop="10px">
+		<EditText android:id="@+id/editQuery" android:hint="@string/editQueryHint"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_weight="3" />
+		<Button android:id="@+id/btnSearch" android:text="@string/btnSearchText"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_weight="1" />
+	</LinearLayout>
+	<TextView android:id ="@+id/textCaption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="25px"/>
+	<ListView android:id="@+id/listResults" android:layout_height="fill_parent"
+		android:layout_width="fill_parent"></ListView>
+</LinearLayout>
